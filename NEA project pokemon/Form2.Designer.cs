@@ -6,7 +6,7 @@
         /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+   
         /// <summary>
         /// Clean up any resources being used.
         /// </summary>
@@ -35,41 +35,47 @@
             // 
             // fight_button
             // 
-            this.fight_button.Location = new System.Drawing.Point(1122, 378);
+            this.fight_button.Location = new System.Drawing.Point(842, 307);
+            this.fight_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.fight_button.Name = "fight_button";
-            this.fight_button.Size = new System.Drawing.Size(159, 72);
+            this.fight_button.Size = new System.Drawing.Size(119, 58);
             this.fight_button.TabIndex = 0;
             this.fight_button.Text = "Fight";
             this.fight_button.UseVisualStyleBackColor = true;
             // 
             // catch_button
             // 
-            this.catch_button.Location = new System.Drawing.Point(1317, 378);
+            this.catch_button.Location = new System.Drawing.Point(988, 307);
+            this.catch_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.catch_button.Name = "catch_button";
-            this.catch_button.Size = new System.Drawing.Size(159, 72);
+            this.catch_button.Size = new System.Drawing.Size(119, 58);
             this.catch_button.TabIndex = 1;
             this.catch_button.Text = "Catch";
             this.catch_button.UseVisualStyleBackColor = true;
             // 
             // run_button
             // 
-            this.run_button.Location = new System.Drawing.Point(1317, 477);
+            this.run_button.Location = new System.Drawing.Point(988, 388);
+            this.run_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.run_button.Name = "run_button";
-            this.run_button.Size = new System.Drawing.Size(159, 72);
+            this.run_button.Size = new System.Drawing.Size(119, 58);
             this.run_button.TabIndex = 2;
             this.run_button.Text = "Run";
             this.run_button.UseVisualStyleBackColor = true;
+            this.run_button.Click += new System.EventHandler(this.run_button_Click);
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1491, 563);
+            this.ClientSize = new System.Drawing.Size(1118, 457);
             this.Controls.Add(this.run_button);
             this.Controls.Add(this.catch_button);
             this.Controls.Add(this.fight_button);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
 
         }

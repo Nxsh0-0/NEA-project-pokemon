@@ -29,10 +29,10 @@ namespace NEA_project_pokemon
         static int manh = 50;
         static obstacle[] obstacles = new obstacle[38];
         static obstacle[] tall_grass = new obstacle[49];
-        static int encounter_chance = 25;
+        static int encounter_chance = 5;
         static Random rnd = new Random();
-        Form2 Form2 = new Form2();
-
+        Form2 form2 = new Form2();
+       
         public Form1()
         {
             InitializeComponent();
@@ -154,7 +154,7 @@ namespace NEA_project_pokemon
             }
             return collision;
         }
-        private Boolean encounter() //collision function to see if player has collided with trees
+        private Boolean encounter() //collision function to see if player has collided with tall grass
         {
             Boolean collision = false;
             for (int i = 0; i < obstacles.Length; i++)
@@ -180,12 +180,13 @@ namespace NEA_project_pokemon
                 { y = y + 30; }
                 if (encounter())
                 {
-                    if (rnd.Next(1, 100) > 25)
+                    if (rnd.Next(1, 100) <= encounter_chance)
                     {
                         this.Hide();
-                        Form2.Show();
+                        form2.Show(this);
+                        
                     }
-                  
+                    else y = y - 10;
                 }
                 else y = y - 10;
             }
@@ -198,12 +199,12 @@ namespace NEA_project_pokemon
                 { x = x + 30; }
                 if (encounter())
                 {
-                    if (rnd.Next(1, 100) > 25)
+                    if (rnd.Next(1, 100) <= encounter_chance)
                     {
                         this.Hide();
-                        Form2.Show();
+                        form2.Show(this);
                     }
-
+                    else x = x - 10;
                 }
                 else x = x - 10;
             }
@@ -216,12 +217,12 @@ namespace NEA_project_pokemon
                 { y = y - 30; }
                 if (encounter())
                 {
-                    if (rnd.Next(1, 100) > 25)
+                    if (rnd.Next(1, 100) <= encounter_chance)
                     {
                         this.Hide();
-                        Form2.Show();
+                        form2.Show(this);
                     }
-
+                    else y = y + 10;
                 }
                 else y = y + 10;
             }
@@ -234,12 +235,12 @@ namespace NEA_project_pokemon
                 { x = x - 30; }
                 if (encounter())
                 {
-                    if (rnd.Next(1, 100) > 25)
+                    if (rnd.Next(1, 100) <= encounter_chance)
                     {
                         this.Hide();
-                        Form2.Show();
+                        form2.Show(this);
                     }
-
+                    else x = x + 10;
                 }
                 else x = x + 10;
             }
