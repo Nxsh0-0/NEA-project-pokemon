@@ -73,6 +73,26 @@ namespace NEA_project_pokemon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bulbasaur {
+            get {
+                object obj = ResourceManager.GetObject("bulbasaur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eevee {
+            get {
+                object obj = ResourceManager.GetObject("eevee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tall_grass {
             get {
                 object obj = ResourceManager.GetObject("tall_grass", resourceCulture);
@@ -86,6 +106,16 @@ namespace NEA_project_pokemon.Properties {
         internal static System.Drawing.Bitmap tree_sprite {
             get {
                 object obj = ResourceManager.GetObject("tree_sprite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap treecko {
+            get {
+                object obj = ResourceManager.GetObject("treecko", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

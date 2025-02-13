@@ -32,7 +32,7 @@ namespace NEA_project_pokemon
         static int encounter_chance = 5;
         static Random rnd = new Random();
         Form2 form2 = new Form2();
-       
+        Form3 form3 = new Form3();
         public Form1()
         {
             InitializeComponent();
@@ -247,6 +247,15 @@ namespace NEA_project_pokemon
 
             pictureBox1.Refresh();
             pictureBox1.Update();
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 'P' || e.KeyChar == 'p')
+            {
+                this.Hide();
+                form3.Show(this);
+            }
         }
     }
 }
