@@ -73,6 +73,16 @@ namespace NEA_project_pokemon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap battlebackground {
+            get {
+                object obj = ResourceManager.GetObject("battlebackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bulbasaur {
             get {
                 object obj = ResourceManager.GetObject("bulbasaur", resourceCulture);

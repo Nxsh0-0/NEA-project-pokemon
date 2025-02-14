@@ -29,7 +29,7 @@ namespace NEA_project_pokemon
         static int manh = 50;
         static obstacle[] obstacles = new obstacle[38];
         static obstacle[] tall_grass = new obstacle[49];
-        static int encounter_chance = 5;
+        static int encounter_chance = 1;
         static Random rnd = new Random();
         Form2 form2 = new Form2();
         Form3 form3 = new Form3();
