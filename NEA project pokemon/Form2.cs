@@ -46,7 +46,15 @@ namespace NEA_project_pokemon
         private void Foepokemon_Paint(object sender, PaintEventArgs e)
         {
             Pokemon encounter = pokemons[rnd.Next(0, pokemons.Count)];
-            e.Graphics.DrawImage(encounter.getsprite(),0,0);
+            e.Graphics.DrawImage(encounter.getsprite(),90,0,160,160);
+        }
+
+        private void Form2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit();
+            }
         }
     }
 }

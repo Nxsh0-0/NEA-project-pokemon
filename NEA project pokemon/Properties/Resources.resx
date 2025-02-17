@@ -130,6 +130,9 @@
   <data name="eevee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eevee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="party_screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\party screen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="tall_grass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tall grass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

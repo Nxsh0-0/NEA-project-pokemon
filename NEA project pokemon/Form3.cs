@@ -30,5 +30,13 @@ namespace NEA_project_pokemon
                 Owner.Show();
             }
         }
+
+        private void Form3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit();
+            }
+        }
     }
 }

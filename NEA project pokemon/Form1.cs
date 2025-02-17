@@ -24,12 +24,12 @@ namespace NEA_project_pokemon
         static Image bush = NEA_project_pokemon.Properties.Resources.tall_grass;
         Image man = F1;
         static int x = 25;
-        static int y = 25;
+        static int y = 500;
         static int manw = 30;
         static int manh = 50;
         static obstacle[] obstacles = new obstacle[38];
         static obstacle[] tall_grass = new obstacle[49];
-        static int encounter_chance = 1;
+        static int encounter_chance = 100;
         static Random rnd = new Random();
         Form2 form2 = new Form2();
         Form3 form3 = new Form3();
@@ -247,6 +247,10 @@ namespace NEA_project_pokemon
 
             pictureBox1.Refresh();
             pictureBox1.Update();
+            if (e.KeyCode == Keys.Escape)
+            {
+                Application.Exit();
+            }
         }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
@@ -256,6 +260,7 @@ namespace NEA_project_pokemon
                 this.Hide();
                 form3.Show(this);
             }
+           
         }
     }
 }

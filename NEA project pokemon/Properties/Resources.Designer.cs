@@ -103,6 +103,16 @@ namespace NEA_project_pokemon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap party_screen {
+            get {
+                object obj = ResourceManager.GetObject("party_screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tall_grass {
             get {
                 object obj = ResourceManager.GetObject("tall_grass", resourceCulture);
