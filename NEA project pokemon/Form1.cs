@@ -22,6 +22,7 @@ namespace NEA_project_pokemon
         static Image R2 = NEA_project_pokemon.Properties.Resources.walkR2;
         static Image tree = NEA_project_pokemon.Properties.Resources.tree_sprite;
         static Image bush = NEA_project_pokemon.Properties.Resources.tall_grass;
+        
         Image man = F1;
         static int x = 25;
         static int y = 500;
@@ -29,7 +30,7 @@ namespace NEA_project_pokemon
         static int manh = 50;
         static obstacle[] obstacles = new obstacle[38];
         static obstacle[] tall_grass = new obstacle[49];
-        static int encounter_chance = 100;
+        static int encounter_chance = 5;
         static Random rnd = new Random();
         Form2 form2 = new Form2();
         Form3 form3 = new Form3();
@@ -41,7 +42,7 @@ namespace NEA_project_pokemon
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
+            
         }
         struct obstacle //defining a structure for all 'obstacles' the player can bump into
         {

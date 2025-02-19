@@ -10,26 +10,36 @@ namespace NEA_project_pokemon
     internal class Pokemon
     {
          Image sprite;
+         Image backsprite;
          string name;
          int maxhp;
          int hp;
-         int attack;
+         int attack;    
          int defence;
-        public Pokemon(Image mysprite, string myname, int mymaxhp, int myhp, int myatk, int mydef)
+       
+        public Pokemon(Image mysprite,Image mybacksprite, string myname, int mymaxhp, int myhp, int myatk, int mydef)
         {
             sprite = mysprite; 
+            backsprite = mybacksprite;
             name = myname;
             maxhp = mymaxhp;
             hp = myhp;
             attack = myatk;
             defence = mydef;
         }
-        public void sethp(int newhp)
-        {
-            hp = newhp;
-        }
+        public Image getbacksprite()
+        { return backsprite; }
         public Image getsprite()
-            { return sprite; }
+        { return sprite; }
+        public void sethp(int newhp)
+        { hp = newhp; }
+        public int gethp()
+        { return hp; }
+        public string getname()
+        { return name; }
+        public int getmaxhp() 
+        { return maxhp;}
     }
+  
     
 }

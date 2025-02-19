@@ -127,8 +127,14 @@
   <data name="bulbasaur" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bulbasaur.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="bulbasaur_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bulbasaur back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="eevee" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\eevee.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eevee_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eevee back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="party_screen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\party screen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,8 +142,17 @@
   <data name="tall_grass" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tall grass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="torchic_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\torchic-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="torchic_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\torchic back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="treecko" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\treecko.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="treecko_back" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\treecko back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tree_sprite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tree sprite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -93,9 +93,29 @@ namespace NEA_project_pokemon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bulbasaur_back {
+            get {
+                object obj = ResourceManager.GetObject("bulbasaur_back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eevee {
             get {
                 object obj = ResourceManager.GetObject("eevee", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eevee_back {
+            get {
+                object obj = ResourceManager.GetObject("eevee_back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +143,26 @@ namespace NEA_project_pokemon.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap torchic_1 {
+            get {
+                object obj = ResourceManager.GetObject("torchic_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap torchic_back {
+            get {
+                object obj = ResourceManager.GetObject("torchic_back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tree_sprite {
             get {
                 object obj = ResourceManager.GetObject("tree_sprite", resourceCulture);
@@ -136,6 +176,16 @@ namespace NEA_project_pokemon.Properties {
         internal static System.Drawing.Bitmap treecko {
             get {
                 object obj = ResourceManager.GetObject("treecko", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap treecko_back {
+            get {
+                object obj = ResourceManager.GetObject("treecko_back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
