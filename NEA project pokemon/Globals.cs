@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace NEA_project_pokemon
 {
-    internal class Globals
+    internal class Globals      
+        //list of all globals variable that will be accessible from any form.
+
     {
         static Image eevee = NEA_project_pokemon.Properties.Resources.eevee;
         static Image eevee_back = NEA_project_pokemon.Properties.Resources.eevee_back;

@@ -42,7 +42,8 @@ namespace NEA_project_pokemon
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            Pokemon starter = Globals.Treecko;
+            Globals.Party.Add(starter);
         }
         struct obstacle //defining a structure for all 'obstacles' the player can bump into
         {

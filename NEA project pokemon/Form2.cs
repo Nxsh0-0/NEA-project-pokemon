@@ -41,7 +41,7 @@ namespace NEA_project_pokemon
         {
             Pokemon encounter = Globals.pokemons[rnd.Next(0, Globals.pokemons.Count)];
             e.Graphics.DrawImage(encounter.getsprite(), 90, 0, 160, 160);
-            Foename.Text = encounter.getname();
+            FoeName.Text = encounter.getname();
             Foehealth.Value = (encounter.gethp() / encounter.getmaxhp()) * 100;
         }
         
@@ -52,6 +52,14 @@ namespace NEA_project_pokemon
             {
                 Application.Exit();
             }
+        }
+
+        private void pictureBox2_Paint(object sender, PaintEventArgs e)
+        {
+            Pokemon battling = Globals.Party[0];
+            e.Graphics.DrawImage(battling.getbacksprite(), 90, 0, 320, 320);
+            BattlingName.Text = battling.getname();
+            BattlingHealth.Value = (battling.gethp() / battling.getmaxhp()) * 100;
         }
     }
 }

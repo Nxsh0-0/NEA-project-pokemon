@@ -33,10 +33,16 @@
             this.run_button = new System.Windows.Forms.Button();
             this.Foepokemon = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Foename = new System.Windows.Forms.TextBox();
+            this.FoeName = new System.Windows.Forms.TextBox();
             this.Foehealth = new System.Windows.Forms.ProgressBar();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.BattlingName = new System.Windows.Forms.TextBox();
+            this.BattlingHealth = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.Foepokemon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // fight_button
@@ -73,7 +79,7 @@
             // Foepokemon
             // 
             this.Foepokemon.BackColor = System.Drawing.Color.Transparent;
-            this.Foepokemon.Location = new System.Drawing.Point(654, 110);
+            this.Foepokemon.Location = new System.Drawing.Point(642, 101);
             this.Foepokemon.Name = "Foepokemon";
             this.Foepokemon.Size = new System.Drawing.Size(308, 171);
             this.Foepokemon.TabIndex = 3;
@@ -82,29 +88,73 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.pictureBox1.Location = new System.Drawing.Point(242, 62);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(265, 100);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // Foename
+            // FoeName
             // 
-            this.Foename.Location = new System.Drawing.Point(242, 62);
-            this.Foename.Multiline = true;
-            this.Foename.Name = "Foename";
-            this.Foename.ReadOnly = true;
-            this.Foename.Size = new System.Drawing.Size(265, 42);
-            this.Foename.TabIndex = 5;
+            this.FoeName.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.FoeName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.FoeName.Location = new System.Drawing.Point(242, 62);
+            this.FoeName.Multiline = true;
+            this.FoeName.Name = "FoeName";
+            this.FoeName.ReadOnly = true;
+            this.FoeName.Size = new System.Drawing.Size(265, 44);
+            this.FoeName.TabIndex = 5;
+            this.FoeName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Foehealth
             // 
             this.Foehealth.BackColor = System.Drawing.Color.Gray;
             this.Foehealth.ForeColor = System.Drawing.Color.RosyBrown;
-            this.Foehealth.Location = new System.Drawing.Point(242, 110);
+            this.Foehealth.Location = new System.Drawing.Point(242, 101);
             this.Foehealth.Name = "Foehealth";
-            this.Foehealth.Size = new System.Drawing.Size(245, 37);
+            this.Foehealth.Size = new System.Drawing.Size(265, 39);
             this.Foehealth.TabIndex = 6;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Location = new System.Drawing.Point(171, 252);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(479, 210);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox2_Paint);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox3.Location = new System.Drawing.Point(-1, 252);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(265, 100);
+            this.pictureBox3.TabIndex = 8;
+            this.pictureBox3.TabStop = false;
+            // 
+            // BattlingName
+            // 
+            this.BattlingName.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.BattlingName.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.BattlingName.Location = new System.Drawing.Point(-1, 252);
+            this.BattlingName.Multiline = true;
+            this.BattlingName.Name = "BattlingName";
+            this.BattlingName.ReadOnly = true;
+            this.BattlingName.Size = new System.Drawing.Size(265, 44);
+            this.BattlingName.TabIndex = 9;
+            this.BattlingName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // BattlingHealth
+            // 
+            this.BattlingHealth.BackColor = System.Drawing.Color.Gray;
+            this.BattlingHealth.ForeColor = System.Drawing.Color.RosyBrown;
+            this.BattlingHealth.Location = new System.Drawing.Point(-1, 302);
+            this.BattlingHealth.Name = "BattlingHealth";
+            this.BattlingHealth.Size = new System.Drawing.Size(265, 39);
+            this.BattlingHealth.TabIndex = 10;
             // 
             // Form2
             // 
@@ -113,8 +163,12 @@
             this.BackgroundImage = global::NEA_project_pokemon.Properties.Resources.battlebackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1118, 457);
+            this.Controls.Add(this.BattlingHealth);
+            this.Controls.Add(this.BattlingName);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Foehealth);
-            this.Controls.Add(this.Foename);
+            this.Controls.Add(this.FoeName);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Foepokemon);
             this.Controls.Add(this.run_button);
@@ -127,6 +181,8 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form2_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.Foepokemon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,7 +195,11 @@
         private System.Windows.Forms.Button run_button;
         private System.Windows.Forms.PictureBox Foepokemon;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox Foename;
+        private System.Windows.Forms.TextBox FoeName;
         private System.Windows.Forms.ProgressBar Foehealth;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.TextBox BattlingName;
+        private System.Windows.Forms.ProgressBar BattlingHealth;
     }
 }

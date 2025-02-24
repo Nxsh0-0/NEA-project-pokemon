@@ -27,9 +27,7 @@ namespace NEA_project_pokemon
         private void Form3_Load(object sender, EventArgs e)
         {
 
-            Pokemon starter = Globals.Torchic;
-
-            Globals.Party.Add(starter);
+           
         }
 
         private void Form3_KeyPress(object sender, KeyPressEventArgs e)
