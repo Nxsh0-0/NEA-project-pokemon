@@ -262,7 +262,14 @@ namespace NEA_project_pokemon
                 this.Hide();
                 form3.Show(this);
             }
-           
+            if (e.KeyChar == 'H' || e.KeyChar == 'h')
+            {
+                for (int i = 0; i < Globals.Party.Count; i++)
+                {
+                    Globals.Party[i].sethp(Globals.Party[i].getmaxhp());
+                }
+            }
+
         }
     }
 }

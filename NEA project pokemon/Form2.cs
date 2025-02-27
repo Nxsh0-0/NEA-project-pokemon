@@ -68,12 +68,18 @@ namespace NEA_project_pokemon
 
         private void fight_button_Click(object sender, EventArgs e)
         {
-            int newhp = Globals.battling.gethp() - (Globals.encounter.getatk() - Globals.battling.getdef()) - 1;
-            Globals.battling.sethp(newhp);
-            BattlingHealth.Value = Globals.battling.gethp();
-           
-            pictureBox2.Refresh();
-            pictureBox2.Update();
+            if ((Globals.battling.gethp() - (Globals.encounter.getatk() - Globals.battling.getdef()) - 1) > 0)
+            {
+                int newhp = Globals.battling.gethp() - (Globals.encounter.getatk() - Globals.battling.getdef()) - 1;
+                Globals.battling.sethp(newhp);
+                BattlingHealth.Value = Globals.battling.gethp(); ;
+                pictureBox2.Refresh();
+                pictureBox2.Update();
+            }
+            else
+            {
+                Globals.battling.sethp(0);
+            }
         }
     }
 }
