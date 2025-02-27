@@ -54,6 +54,7 @@
             this.fight_button.TabIndex = 0;
             this.fight_button.Text = "Fight";
             this.fight_button.UseVisualStyleBackColor = true;
+            this.fight_button.Click += new System.EventHandler(this.fight_button_Click);
             // 
             // catch_button
             // 

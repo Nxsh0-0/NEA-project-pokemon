@@ -39,6 +39,10 @@ namespace NEA_project_pokemon
         { return name; }
         public int getmaxhp() 
         { return maxhp;}
+        public int getatk()
+        { return attack;}
+        public int getdef()
+        { return defence;}
     }
   
     

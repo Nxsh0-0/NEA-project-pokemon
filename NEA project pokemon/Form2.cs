@@ -39,10 +39,11 @@ namespace NEA_project_pokemon
 
         private void Foepokemon_Paint(object sender, PaintEventArgs e)
         {
-            Pokemon encounter = Globals.pokemons[rnd.Next(0, Globals.pokemons.Count)];
-            e.Graphics.DrawImage(encounter.getsprite(), 90, 0, 160, 160);
-            FoeName.Text = encounter.getname();
-            Foehealth.Value = (encounter.gethp() / encounter.getmaxhp()) * 100;
+            Globals.encounter = Globals.pokemons[rnd.Next(0, Globals.pokemons.Count)];
+            e.Graphics.DrawImage(Globals.encounter.getsprite(), 90, 0, 160, 160);
+            FoeName.Text = Globals.encounter.getname();
+            Foehealth.Maximum = Globals.encounter.getmaxhp();
+            Foehealth.Value = Globals.encounter.gethp();
         }
         
 
@@ -56,10 +57,23 @@ namespace NEA_project_pokemon
 
         private void pictureBox2_Paint(object sender, PaintEventArgs e)
         {
-            Pokemon battling = Globals.Party[0];
-            e.Graphics.DrawImage(battling.getbacksprite(), 90, 0, 320, 320);
-            BattlingName.Text = battling.getname();
-            BattlingHealth.Value = (battling.gethp() / battling.getmaxhp()) * 100;
+            Globals.battling = Globals.Party[0];
+            e.Graphics.DrawImage(Globals.battling.getbacksprite(), 90, 0, 320, 320);
+            BattlingName.Text = Globals.battling.getname();
+            BattlingHealth.Maximum = Globals.battling.getmaxhp();
+            BattlingHealth.Value = Globals.battling.gethp();
+
+            
+        }
+
+        private void fight_button_Click(object sender, EventArgs e)
+        {
+            int newhp = Globals.battling.gethp() - (Globals.encounter.getatk() - Globals.battling.getdef()) - 1;
+            Globals.battling.sethp(newhp);
+            BattlingHealth.Value = Globals.battling.gethp();
+           
+            pictureBox2.Refresh();
+            pictureBox2.Update();
         }
     }
 }

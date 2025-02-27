@@ -25,6 +25,8 @@ namespace NEA_project_pokemon
         public static Pokemon Bulbasaur = new Pokemon(bulbasaur, bulbasaur_back, "Bulbasaur", 45, 45, 57, 47);
         public static Pokemon Treecko = new Pokemon(treecko, treecko_back, "Treecko", 40, 40, 55, 45);
         public static Pokemon Eevee = new Pokemon(eevee, eevee_back, "Eevee", 55, 55, 50, 57);
+        public static Pokemon battling;
+        public static Pokemon encounter;
 
     }
 }
