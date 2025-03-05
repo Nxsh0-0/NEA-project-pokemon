@@ -55,5 +55,45 @@ namespace NEA_project_pokemon
             }
 
         }
+
+        private void pictureBox2_Paint(object sender, PaintEventArgs e)
+        {
+            if (Globals.Party.Count >= 2)
+            {
+                e.Graphics.DrawImage(Globals.Party[1].getsprite(), 40, 25, 100, 100);
+            }
+        }
+
+        private void pictureBox3_Paint(object sender, PaintEventArgs e)
+        {
+            if (Globals.Party.Count >= 3)
+            {
+                e.Graphics.DrawImage(Globals.Party[2].getsprite(), 40, 25, 100, 100);
+            }
+        }
+
+        private void pictureBox4_Paint(object sender, PaintEventArgs e)
+        {
+            if (Globals.Party.Count >= 4)
+            {
+                e.Graphics.DrawImage(Globals.Party[3].getsprite(), 40, 25, 100, 100);
+            }
+        }
+
+        private void pictureBox5_Paint(object sender, PaintEventArgs e)
+        {
+            if (Globals.Party.Count >= 5)
+            {
+                e.Graphics.DrawImage(Globals.Party[4].getsprite(), 40, 25, 100, 100);
+            }
+        }
+
+        private void pictureBox6_Paint(object sender, PaintEventArgs e)
+        {
+            if (Globals.Party.Count >= 6)
+            {
+                e.Graphics.DrawImage(Globals.Party[5].getsprite(), 40, 25, 100, 100);
+            }
+        }
     }
 }

@@ -29,6 +29,8 @@ namespace NEA_project_pokemon
             Globals.pokemons.Add(Globals.Treecko);
             Globals.pokemons.Add(Globals.Bulbasaur);
             Globals.pokemons.Add(Globals.Torchic);
+
+            
         }
 
         private void run_button_Click(object sender, EventArgs e)
@@ -39,7 +41,7 @@ namespace NEA_project_pokemon
 
         private void Foepokemon_Paint(object sender, PaintEventArgs e)
         {
-            Globals.encounter = Globals.pokemons[rnd.Next(0, Globals.pokemons.Count)];
+            
             e.Graphics.DrawImage(Globals.encounter.getsprite(), 90, 0, 160, 160);
             FoeName.Text = Globals.encounter.getname();
             Foehealth.Maximum = Globals.encounter.getmaxhp();
@@ -70,16 +72,65 @@ namespace NEA_project_pokemon
         {
             if ((Globals.battling.gethp() - (Globals.encounter.getatk() - Globals.battling.getdef()) - 1) > 0)
             {
-                int newhp = Globals.battling.gethp() - (Globals.encounter.getatk() - Globals.battling.getdef()) - 1;
-                Globals.battling.sethp(newhp);
-                BattlingHealth.Value = Globals.battling.gethp(); ;
+                Globals.battling.sethp(Globals.battling.gethp() - (Globals.encounter.getatk() - Globals.battling.getdef()) - 1);
+                BattlingHealth.Value = Globals.battling.gethp();
+                
+
                 pictureBox2.Refresh();
                 pictureBox2.Update();
             }
             else
             {
                 Globals.battling.sethp(0);
+                BattlingHealth.Value = Globals.battling.gethp();
+                
+                pictureBox2.Refresh();
+                pictureBox2.Update();
             }
+            if ((Globals.encounter.gethp() - (Globals.battling.getatk() - Globals.encounter.getdef()) - 1) > 0)
+            {
+                Globals.encounter.sethp(Globals.encounter.gethp() - (Globals.battling.getatk() - Globals.encounter.getdef()) - 1);
+                Foehealth.Value = Globals.encounter.gethp();
+            }
+            else
+            {
+                label1.Text =  Globals.encounter.getname() + " has fainted!";
+                label1.Visible = true;
+                Foehealth.Value = 0;
+                
+            }
+        }
+
+        private void catch_button_Click(object sender, EventArgs e)
+        {
+            int catch_chance = 100;
+            if (rnd.Next(1,100) <= catch_chance)
+            {
+                if (Globals.Party.Count < 6)
+                {
+                    Globals.Party.Add(Globals.encounter);
+                    label1.Text = "Successfully caught and added to your party!";
+                    label1.Visible = true;
+                }
+                else
+                {
+                    label1.Text = "Party already full! Failed to catch." + Globals.encounter.getname() + " has run away!";
+                    label1.Visible = true;
+                }
+                
+            }
+            else
+            {
+                label1.Text = "Failed to catch." + Globals.encounter.getname() + " has run away!";
+                label1.Visible = true;
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            label1.Visible = false;
+            this.Hide();
+            Owner.Show();
         }
     }
 }

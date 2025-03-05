@@ -39,6 +39,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.BattlingName = new System.Windows.Forms.TextBox();
             this.BattlingHealth = new System.Windows.Forms.ProgressBar();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Foepokemon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -65,6 +66,7 @@
             this.catch_button.TabIndex = 1;
             this.catch_button.Text = "Catch";
             this.catch_button.UseVisualStyleBackColor = true;
+            this.catch_button.Click += new System.EventHandler(this.catch_button_Click);
             // 
             // run_button
             // 
@@ -157,6 +159,18 @@
             this.BattlingHealth.Size = new System.Drawing.Size(265, 39);
             this.BattlingHealth.TabIndex = 10;
             // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label1.Location = new System.Drawing.Point(771, 262);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(352, 200);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "What will your pokemon do?";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Visible = false;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -164,6 +178,7 @@
             this.BackgroundImage = global::NEA_project_pokemon.Properties.Resources.battlebackground;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1118, 457);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BattlingHealth);
             this.Controls.Add(this.BattlingName);
             this.Controls.Add(this.pictureBox3);
@@ -202,5 +217,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.TextBox BattlingName;
         private System.Windows.Forms.ProgressBar BattlingHealth;
+        private System.Windows.Forms.Label label1;
     }
 }

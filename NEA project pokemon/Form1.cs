@@ -30,20 +30,22 @@ namespace NEA_project_pokemon
         static int manh = 50;
         static obstacle[] obstacles = new obstacle[38];
         static obstacle[] tall_grass = new obstacle[49];
-        static int encounter_chance = 100;
+        static int encounter_chance = 10;
         static Random rnd = new Random();
         Form2 form2 = new Form2();
         Form3 form3 = new Form3();
         public Form1()
         {
             InitializeComponent();
+            Pokemon starter = Globals.Treecko;
+            Globals.Party.Add(starter);
         }
         
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Pokemon starter = Globals.Treecko;
-            Globals.Party.Add(starter);
+            
+            
         }
         struct obstacle //defining a structure for all 'obstacles' the player can bump into
         {
@@ -186,7 +188,9 @@ namespace NEA_project_pokemon
                     {
                         this.Hide();
                         form2.Show(this);
-                        
+                        Globals.encounter = Globals.pokemons[rnd.Next(0, Globals.pokemons.Count)];
+                        Globals.encounter.sethp(Globals.encounter.getmaxhp());
+
                     }
                     else y = y - 10;
                 }
@@ -205,6 +209,8 @@ namespace NEA_project_pokemon
                     {
                         this.Hide();
                         form2.Show(this);
+                        Globals.encounter = Globals.pokemons[rnd.Next(0, Globals.pokemons.Count)];
+                        Globals.encounter.sethp(Globals.encounter.getmaxhp());
                     }
                     else x = x - 10;
                 }
@@ -223,6 +229,8 @@ namespace NEA_project_pokemon
                     {
                         this.Hide();
                         form2.Show(this);
+                        Globals.encounter = Globals.pokemons[rnd.Next(0, Globals.pokemons.Count)];
+                        Globals.encounter.sethp(Globals.encounter.getmaxhp());
                     }
                     else y = y + 10;
                 }

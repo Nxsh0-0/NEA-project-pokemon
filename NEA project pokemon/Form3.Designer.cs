@@ -60,6 +60,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(216, 114);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox2_Paint);
             // 
             // pictureBox3
             // 
@@ -69,6 +70,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(216, 114);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox3_Paint);
             // 
             // pictureBox4
             // 
@@ -78,6 +80,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(216, 114);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox4_Paint);
             // 
             // pictureBox5
             // 
@@ -87,6 +90,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(216, 114);
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox5_Paint);
             // 
             // pictureBox6
             // 
@@ -96,6 +100,7 @@
             this.pictureBox6.Size = new System.Drawing.Size(216, 114);
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox6_Paint);
             // 
             // Form3
             // 
