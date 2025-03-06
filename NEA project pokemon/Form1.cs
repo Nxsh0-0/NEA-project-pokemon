@@ -37,7 +37,7 @@ namespace NEA_project_pokemon
         public Form1()
         {
             InitializeComponent();
-            Pokemon starter = Globals.Treecko;
+            Pokemon starter = Globals.Eevee;
             Globals.Party.Add(starter);
         }
         
@@ -249,6 +249,8 @@ namespace NEA_project_pokemon
                     {
                         this.Hide();
                         form2.Show(this);
+                        Globals.encounter = Globals.pokemons[rnd.Next(0, Globals.pokemons.Count )];
+                        Globals.encounter.sethp(Globals.encounter.getmaxhp());
                     }
                     else x = x + 10;
                 }
@@ -265,12 +267,13 @@ namespace NEA_project_pokemon
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == 'P' || e.KeyChar == 'p')
+            if (e.KeyChar == 'P' || e.KeyChar == 'p')   //press p to view your party screen
             {
+
                 this.Hide();
                 form3.Show(this);
             }
-            if (e.KeyChar == 'H' || e.KeyChar == 'h')
+            if (e.KeyChar == 'H' || e.KeyChar == 'h')   //heals your team when pressing h
             {
                 for (int i = 0; i < Globals.Party.Count; i++)
                 {

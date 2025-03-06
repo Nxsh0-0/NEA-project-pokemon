@@ -72,7 +72,10 @@ namespace NEA_project_pokemon
         {
             if ((Globals.battling.gethp() - (Globals.encounter.getatk() - Globals.battling.getdef()) - 1) > 0)
             {
-                Globals.battling.sethp(Globals.battling.gethp() - (Globals.encounter.getatk() - Globals.battling.getdef()) - 1);
+                int dmg = Globals.encounter.getatk() - Globals.battling.getdef(); //calculates the damage dealt
+                if (dmg < 0) //if dmg is negative then the pokmeon would be healed when attacked so set to 0
+                { dmg = 0; }
+                Globals.battling.sethp(Globals.battling.gethp() - dmg - 1);
                 BattlingHealth.Value = Globals.battling.gethp();
                 
 
@@ -83,17 +86,23 @@ namespace NEA_project_pokemon
             {
                 Globals.battling.sethp(0);
                 BattlingHealth.Value = Globals.battling.gethp();
-                
+                label1.Text = Globals.battling.getname() + " has fainted!";
+                label1.Visible = true;
+
                 pictureBox2.Refresh();
                 pictureBox2.Update();
             }
             if ((Globals.encounter.gethp() - (Globals.battling.getatk() - Globals.encounter.getdef()) - 1) > 0)
             {
-                Globals.encounter.sethp(Globals.encounter.gethp() - (Globals.battling.getatk() - Globals.encounter.getdef()) - 1);
+                int dmg = Globals.battling.getatk() - Globals.encounter.getdef(); //calculates the damage dealt
+                if (dmg < 0) //if dmg is negative then the pokmeon would be healed when attacked so set to 0
+                { dmg = 0; }
+                Globals.encounter.sethp(Globals.encounter.gethp() - dmg - 1);
                 Foehealth.Value = Globals.encounter.gethp();
             }
             else
             {
+                Globals.encounter.sethp(0);
                 label1.Text =  Globals.encounter.getname() + " has fainted!";
                 label1.Visible = true;
                 Foehealth.Value = 0;

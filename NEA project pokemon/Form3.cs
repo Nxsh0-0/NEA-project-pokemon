@@ -26,8 +26,10 @@ namespace NEA_project_pokemon
 
         private void Form3_Load(object sender, EventArgs e)
         {
+     
+            
+            
 
-           
         }
 
         private void Form3_KeyPress(object sender, KeyPressEventArgs e)
@@ -37,6 +39,7 @@ namespace NEA_project_pokemon
                 this.Hide();
                 Owner.Show();
             }
+            
         }
 
         private void Form3_KeyDown(object sender, KeyEventArgs e)
@@ -45,6 +48,7 @@ namespace NEA_project_pokemon
             {
                 Application.Exit();
             }
+            
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -53,7 +57,13 @@ namespace NEA_project_pokemon
             {
                 e.Graphics.DrawImage(Globals.Party[0].getsprite(), 40, 25, 100, 100);
             }
-
+            if (Globals.Party.Count >= 1)
+            {
+                progressBar1.Maximum = Globals.Party[0].getmaxhp();
+                progressBar1.Value = Globals.Party[0].gethp();
+                progressBar1.Refresh();
+                progressBar1.Update();
+            }
         }
 
         private void pictureBox2_Paint(object sender, PaintEventArgs e)
@@ -61,6 +71,13 @@ namespace NEA_project_pokemon
             if (Globals.Party.Count >= 2)
             {
                 e.Graphics.DrawImage(Globals.Party[1].getsprite(), 40, 25, 100, 100);
+            }
+            if (Globals.Party.Count >= 2)
+            {
+                progressBar2.Maximum = Globals.Party[1].getmaxhp();
+                progressBar2.Value = Globals.Party[1].gethp();
+                progressBar2.Refresh();
+                progressBar2.Update();
             }
         }
 
@@ -70,6 +87,13 @@ namespace NEA_project_pokemon
             {
                 e.Graphics.DrawImage(Globals.Party[2].getsprite(), 40, 25, 100, 100);
             }
+            if (Globals.Party.Count >= 3)
+            {
+                progressBar3.Maximum = Globals.Party[2].getmaxhp();
+                progressBar3.Value = Globals.Party[2].gethp();
+                progressBar3.Refresh();
+                progressBar3.Update();
+            }
         }
 
         private void pictureBox4_Paint(object sender, PaintEventArgs e)
@@ -77,6 +101,13 @@ namespace NEA_project_pokemon
             if (Globals.Party.Count >= 4)
             {
                 e.Graphics.DrawImage(Globals.Party[3].getsprite(), 40, 25, 100, 100);
+            }
+            if (Globals.Party.Count >= 4)
+            {
+                progressBar4.Maximum = Globals.Party[3].getmaxhp();
+                progressBar4.Value = Globals.Party[3].gethp();
+                progressBar4.Refresh();
+                progressBar4.Update();
             }
         }
 
@@ -86,6 +117,13 @@ namespace NEA_project_pokemon
             {
                 e.Graphics.DrawImage(Globals.Party[4].getsprite(), 40, 25, 100, 100);
             }
+            if (Globals.Party.Count >= 5)
+            {
+                progressBar5.Maximum = Globals.Party[4].getmaxhp();
+                progressBar5.Value = Globals.Party[4].gethp();
+                progressBar5.Refresh();
+                progressBar5.Update();
+            }
         }
 
         private void pictureBox6_Paint(object sender, PaintEventArgs e)
@@ -93,6 +131,13 @@ namespace NEA_project_pokemon
             if (Globals.Party.Count >= 6)
             {
                 e.Graphics.DrawImage(Globals.Party[5].getsprite(), 40, 25, 100, 100);
+            }
+            if (Globals.Party.Count >= 6)
+            {
+                progressBar6.Maximum = Globals.Party[5].getmaxhp();
+                progressBar6.Value = Globals.Party[5].gethp();
+                progressBar6.Refresh();
+                progressBar6.Update();
             }
         }
     }
