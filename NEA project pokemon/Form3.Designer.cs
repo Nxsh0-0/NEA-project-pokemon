@@ -40,6 +40,9 @@
             this.progressBar4 = new System.Windows.Forms.ProgressBar();
             this.progressBar5 = new System.Windows.Forms.ProgressBar();
             this.progressBar6 = new System.Windows.Forms.ProgressBar();
+            this.switchconfirm = new System.Windows.Forms.Label();
+            this.switchyes = new System.Windows.Forms.Button();
+            this.switchno = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -56,6 +59,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(216, 114);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Tag = "1";
             this.pictureBox1.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox1_Paint);
             // 
             // pictureBox2
@@ -66,6 +70,8 @@
             this.pictureBox2.Size = new System.Drawing.Size(216, 114);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Tag = "2";
+            this.pictureBox2.Click += new System.EventHandler(this.CommonPicbox);
             this.pictureBox2.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox2_Paint);
             // 
             // pictureBox3
@@ -76,6 +82,8 @@
             this.pictureBox3.Size = new System.Drawing.Size(216, 114);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Tag = "3";
+            this.pictureBox3.Click += new System.EventHandler(this.CommonPicbox);
             this.pictureBox3.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox3_Paint);
             // 
             // pictureBox4
@@ -86,6 +94,8 @@
             this.pictureBox4.Size = new System.Drawing.Size(216, 114);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Tag = "4";
+            this.pictureBox4.Click += new System.EventHandler(this.CommonPicbox);
             this.pictureBox4.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox4_Paint);
             // 
             // pictureBox5
@@ -96,6 +106,8 @@
             this.pictureBox5.Size = new System.Drawing.Size(216, 114);
             this.pictureBox5.TabIndex = 4;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Tag = "5";
+            this.pictureBox5.Click += new System.EventHandler(this.CommonPicbox);
             this.pictureBox5.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox5_Paint);
             // 
             // pictureBox6
@@ -106,6 +118,8 @@
             this.pictureBox6.Size = new System.Drawing.Size(216, 114);
             this.pictureBox6.TabIndex = 5;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Tag = "6";
+            this.pictureBox6.Click += new System.EventHandler(this.CommonPicbox);
             this.pictureBox6.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox6_Paint);
             // 
             // progressBar1
@@ -156,6 +170,39 @@
             this.progressBar6.Step = 1;
             this.progressBar6.TabIndex = 11;
             // 
+            // switchconfirm
+            // 
+            this.switchconfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.switchconfirm.Location = new System.Drawing.Point(230, 263);
+            this.switchconfirm.Name = "switchconfirm";
+            this.switchconfirm.Size = new System.Drawing.Size(333, 166);
+            this.switchconfirm.TabIndex = 12;
+            this.switchconfirm.Text = "label1";
+            this.switchconfirm.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.switchconfirm.Visible = false;
+            // 
+            // switchyes
+            // 
+            this.switchyes.Location = new System.Drawing.Point(268, 390);
+            this.switchyes.Name = "switchyes";
+            this.switchyes.Size = new System.Drawing.Size(75, 23);
+            this.switchyes.TabIndex = 13;
+            this.switchyes.Text = "Yes";
+            this.switchyes.UseVisualStyleBackColor = true;
+            this.switchyes.Visible = false;
+            this.switchyes.Click += new System.EventHandler(this.switchyes_Click);
+            // 
+            // switchno
+            // 
+            this.switchno.Location = new System.Drawing.Point(460, 390);
+            this.switchno.Name = "switchno";
+            this.switchno.Size = new System.Drawing.Size(75, 23);
+            this.switchno.TabIndex = 14;
+            this.switchno.Text = "No";
+            this.switchno.UseVisualStyleBackColor = true;
+            this.switchno.Visible = false;
+            this.switchno.Click += new System.EventHandler(this.switchno_Click);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,6 +210,9 @@
             this.BackgroundImage = global::NEA_project_pokemon.Properties.Resources.party_screen;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.switchno);
+            this.Controls.Add(this.switchyes);
+            this.Controls.Add(this.switchconfirm);
             this.Controls.Add(this.progressBar6);
             this.Controls.Add(this.progressBar5);
             this.Controls.Add(this.progressBar4);
@@ -204,5 +254,8 @@
         private System.Windows.Forms.ProgressBar progressBar4;
         private System.Windows.Forms.ProgressBar progressBar5;
         private System.Windows.Forms.ProgressBar progressBar6;
+        private System.Windows.Forms.Label switchconfirm;
+        private System.Windows.Forms.Button switchyes;
+        private System.Windows.Forms.Button switchno;
     }
 }

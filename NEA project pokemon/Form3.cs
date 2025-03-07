@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
@@ -16,7 +17,7 @@ namespace NEA_project_pokemon
         static Image eevee = NEA_project_pokemon.Properties.Resources.eevee;
         static Image treecko = NEA_project_pokemon.Properties.Resources.treecko;
         static Image bulbasaur = NEA_project_pokemon.Properties.Resources.bulbasaur;
-        
+        static Pokemon Switcher;
 
 
         public Form3()
@@ -139,6 +140,92 @@ namespace NEA_project_pokemon
                 progressBar6.Refresh();
                 progressBar6.Update();
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void switchno_Click(object sender, EventArgs e)
+        {
+            switchyes.Visible = false;
+            switchno.Visible = false;
+            switchconfirm.Visible = false;
+        }
+
+        private void switchyes_Click(object sender, EventArgs e)
+        {
+            Pokemon temp = Globals.Party[0];
+            var box = sender as PictureBox;
+            switch (box.Tag)
+            {
+                case 2:
+                    Globals.Party[0] = Globals.Party[1];
+                    Globals.Party[1] = temp;
+                    break;
+                case 3:
+                    Globals.Party[0] = Globals.Party[2];
+                    Globals.Party[2] = temp;
+                    break;
+                case 4:
+                    Globals.Party[0] = Globals.Party[3];
+                    Globals.Party[3] = temp;
+                    break;
+                case 5:
+                    Globals.Party[0] = Globals.Party[4];
+                    Globals.Party[4] = temp;
+                    break;
+                case 6:
+                    Globals.Party[0] = Globals.Party[5];
+                    Globals.Party[5] = temp;
+                    break;
+                
+
+
+
+            }
+        }
+
+        private void CommonPicbox(object sender, EventArgs e)
+        {
+            var box = sender as PictureBox;
+            switch (box.Tag)
+            {
+                case 2:
+                    switchconfirm.Text = "Switch " + Globals.Party[1] + " to the front?";
+                    switchyes.Visible = true;
+                    switchno.Visible = true;
+                    switchconfirm.Visible = true;
+                    break;
+                case 3:
+                    switchconfirm.Text = "Switch " + Globals.Party[2] + " to the front?";
+                    switchyes.Visible = true;
+                    switchno.Visible = true;
+                    switchconfirm.Visible = true;
+                    break;
+                case 4:
+                    switchconfirm.Text = "Switch " + Globals.Party[3] + " to the front?";
+                    switchyes.Visible = true;
+                    switchno.Visible = true;
+                    switchconfirm.Visible = true;
+                    break;
+                case 5:
+                    switchconfirm.Text = "Switch " + Globals.Party[4] + " to the front?";
+                    switchyes.Visible = true;
+                    switchno.Visible = true;
+                    switchconfirm.Visible = true;
+                    break;
+                case 6:
+                    switchconfirm.Text = "Switch " + Globals.Party[5] + " to the front?";
+                    switchyes.Visible = true;
+                    switchno.Visible = true;
+                    switchconfirm.Visible = true;
+                    break;
+               
+            }
+            
+
         }
     }
 }
