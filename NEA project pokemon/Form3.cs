@@ -18,6 +18,7 @@ namespace NEA_project_pokemon
         static Image treecko = NEA_project_pokemon.Properties.Resources.treecko;
         static Image bulbasaur = NEA_project_pokemon.Properties.Resources.bulbasaur;
         static Pokemon Switcher;
+        static int partyslot;
 
 
         public Form3()
@@ -49,7 +50,12 @@ namespace NEA_project_pokemon
             {
                 Application.Exit();
             }
-            
+            if (e.KeyCode == Keys.P )
+            {
+                this.Hide();
+                Owner.Show();
+            }
+
         }
 
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
@@ -142,10 +148,7 @@ namespace NEA_project_pokemon
             }
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void switchno_Click(object sender, EventArgs e)
         {
@@ -157,28 +160,64 @@ namespace NEA_project_pokemon
         private void switchyes_Click(object sender, EventArgs e)
         {
             Pokemon temp = Globals.Party[0];
-            var box = sender as PictureBox;
-            switch (box.Tag)
+           
+            
+            switch (partyslot)
             {
                 case 2:
                     Globals.Party[0] = Globals.Party[1];
                     Globals.Party[1] = temp;
+                    pictureBox2.Refresh();
+                    pictureBox2.Update();
+                    pictureBox1.Refresh();
+                    pictureBox1.Update();
+                    switchyes.Visible = false;
+                    switchno.Visible = false;
+                    switchconfirm.Visible = false;
                     break;
                 case 3:
                     Globals.Party[0] = Globals.Party[2];
                     Globals.Party[2] = temp;
+                    pictureBox3.Refresh();
+                    pictureBox3.Update();
+                    pictureBox1.Refresh();
+                    pictureBox1.Update();
+                    switchyes.Visible = false;
+                    switchno.Visible = false;
+                    switchconfirm.Visible = false;
                     break;
                 case 4:
                     Globals.Party[0] = Globals.Party[3];
                     Globals.Party[3] = temp;
+                    pictureBox4.Refresh();
+                    pictureBox4.Update();
+                    pictureBox1.Refresh();
+                    pictureBox1.Update();
+                    switchyes.Visible = false;
+                    switchno.Visible = false;
+                    switchconfirm.Visible = false;
                     break;
                 case 5:
                     Globals.Party[0] = Globals.Party[4];
                     Globals.Party[4] = temp;
+                    pictureBox5.Refresh();
+                    pictureBox5.Update();
+                    pictureBox1.Refresh();
+                    pictureBox1.Update();
+                    switchyes.Visible = false;
+                    switchno.Visible = false;
+                    switchconfirm.Visible = false;
                     break;
                 case 6:
                     Globals.Party[0] = Globals.Party[5];
                     Globals.Party[5] = temp;
+                    pictureBox6.Refresh();
+                    pictureBox6.Update();
+                    pictureBox1.Refresh();
+                    pictureBox1.Update();
+                    switchyes.Visible = false;
+                    switchno.Visible = false;
+                    switchconfirm.Visible = false;
                     break;
                 
 
@@ -187,45 +226,57 @@ namespace NEA_project_pokemon
             }
         }
 
-        private void CommonPicbox(object sender, EventArgs e)
-        {
-            var box = sender as PictureBox;
-            switch (box.Tag)
-            {
-                case 2:
-                    switchconfirm.Text = "Switch " + Globals.Party[1] + " to the front?";
-                    switchyes.Visible = true;
-                    switchno.Visible = true;
-                    switchconfirm.Visible = true;
-                    break;
-                case 3:
-                    switchconfirm.Text = "Switch " + Globals.Party[2] + " to the front?";
-                    switchyes.Visible = true;
-                    switchno.Visible = true;
-                    switchconfirm.Visible = true;
-                    break;
-                case 4:
-                    switchconfirm.Text = "Switch " + Globals.Party[3] + " to the front?";
-                    switchyes.Visible = true;
-                    switchno.Visible = true;
-                    switchconfirm.Visible = true;
-                    break;
-                case 5:
-                    switchconfirm.Text = "Switch " + Globals.Party[4] + " to the front?";
-                    switchyes.Visible = true;
-                    switchno.Visible = true;
-                    switchconfirm.Visible = true;
-                    break;
-                case 6:
-                    switchconfirm.Text = "Switch " + Globals.Party[5] + " to the front?";
-                    switchyes.Visible = true;
-                    switchno.Visible = true;
-                    switchconfirm.Visible = true;
-                    break;
-               
-            }
-            
+        
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            switchconfirm.Text = "Switch " + Globals.Party[1].getname() + " to the front?";
+            switchyes.Visible = true;
+            switchno.Visible = true;
+            switchconfirm.Visible = true;
+            partyslot = 2;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            switchconfirm.Text = "Switch " + Globals.Party[2].getname() + " to the front?";
+            switchyes.Visible = true;
+            switchno.Visible = true;
+            switchconfirm.Visible = true;
+            partyslot = 3;
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            switchconfirm.Text = "Switch " + Globals.Party[3].getname() + " to the front?";
+            switchyes.Visible = true;
+            switchno.Visible = true;
+            switchconfirm.Visible = true;
+            partyslot = 4;
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            switchconfirm.Text = "Switch " + Globals.Party[4].getname() + " to the front?";
+            switchyes.Visible = true;
+            switchno.Visible = true;
+            switchconfirm.Visible = true;
+            partyslot = 5;
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            switchconfirm.Text = "Switch " + Globals.Party[5].getname() + " to the front?";
+            switchyes.Visible = true;
+            switchno.Visible = true;
+            switchconfirm.Visible = true;
+            partyslot = 6;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Owner.Show();
         }
     }
 }
